@@ -1,9 +1,7 @@
 // ignore: file_names
 
-import 'package:adult_eating_behaviour_questionaire/model/scoring.dart';
-import 'package:flutter/material.dart';
-
 import 'questions.dart';
+import 'scoring.dart';
 
 // ignore: camel_case_types
 class AEBQ_Question {
@@ -178,18 +176,35 @@ class AEBQ_Question {
     }
   }
 
+  String questionsTopics(int order) {
+    String topic;
+    switch (order) {
+      case 0:
+        return topic = 'Enjoyment of Food';
+      case 1:
+        return topic = 'Emotional Over-Eating';
+      case 2:
+        return topic = 'Emotional Under-Eating';
+      case 3:
+        return topic = 'Food Fussiness';
+      case 4:
+        return topic = 'Food Responsiveness';
+      case 5:
+        return topic = 'Slowness in Eating';
+      case 6:
+        return topic = 'Hunger';
+      case 7:
+        return topic = 'Satiety Responsiveness';
+    }
+    return topic;
+  }
+
   List<Scoring> standardScoring = [
-    const Scoring(choices: 'Strongly Disagree', score: 1),
-    const Scoring(choices: 'Disagree', score: 2),
-    const Scoring(choices: 'Neutral', score: 3),
-    const Scoring(choices: 'Agree', score: 4),
     const Scoring(choices: 'Strongly Agree', score: 5),
-  ];
-  List<Scoring> reverseScoring = [
-    const Scoring(choices: 'Strongly Disagree', score: 5),
-    const Scoring(choices: 'Disagree', score: 4),
+    const Scoring(choices: 'Agree', score: 4),
     const Scoring(choices: 'Neutral', score: 3),
-    const Scoring(choices: 'Agree', score: 2),
-    const Scoring(choices: 'Strongly Agree', score: 1),
+    const Scoring(choices: 'Disagree', score: 2),
+    const Scoring(choices: 'Strongly Disagree', score: 1),
   ];
+
 }

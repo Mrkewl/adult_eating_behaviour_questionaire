@@ -1,8 +1,11 @@
-import 'package:adult_eating_behaviour_questionaire/model/questions.dart';
+import 'package:flutter/material.dart';
+import '/model/questions.dart';
+import '/model/scoring.dart';
 
-class Answers{
-  Answers({this.questions,this.answers});
+class Answers {
+  Answers(
+      {@required this.questions, @required this.score});
   Questions questions;
-  String answers;
-
+ 
+  Scoring score;
 }

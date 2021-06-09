@@ -1,12 +1,13 @@
-import 'package:adult_eating_behaviour_questionaire/model/user_answers.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './widgets/homepage_dots.dart';
+import '/model/user_answers.dart';
 import 'screens/pageview1_screen.dart';
 import 'screens/pageview2_screen.dart';
 import 'screens/pageview3_screen.dart';
 import 'screens/questionaire_screen.dart';
+import 'screens/results_screen.dart';
 
 void main() {
   runApp(const AEBQ());
@@ -27,7 +28,10 @@ class AEBQ extends StatelessWidget {
         theme: ThemeData(
             primaryColor: const Color(0xff56B1BF),
             primaryColorDark: const Color(0xff08708A)),
-        home: const MyHomePage(),
+        home: 
+        // Results(),
+        const 
+        MyHomePage(),
       ),
     );
   }
